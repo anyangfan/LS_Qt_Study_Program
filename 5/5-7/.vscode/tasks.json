@@ -1,0 +1,120 @@
+{
+    //参考网址：https://blog.csdn.net/WlkJiangYou/article/details/136262589?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522171533313016800186541310%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=171533313016800186541310&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-6-136262589-null-null.142^v100^pc_search_result_base5&utm_term=vscode%E9%85%8D%E7%BD%AEqt&spm=1018.2226.3001.4187
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "mkdir",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "command": "mkdir",
+            "args": [
+                "-Force",
+                "build"
+            ]
+        },
+        {
+            "label": "qmake-debug",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "command": "G:/Qt/5.14.2/mingw73_64/bin/qmake.exe",
+            "args": [
+                "../QList_QLinkedList.pro",
+                "-spec",
+                "win32-g++",
+                "\"CONFIG+=debug\"",
+                "\"CONFIG+=qtquickcompiler\"",
+                "\"CONFIG+=console\""
+            ],
+            "dependsOn": [
+                "mkdir"
+            ]
+        },
+        {
+            "label": "make-debug",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "command": "G:/Qt/Tools/mingw730_64/bin/mingw32-make",
+            "args": [
+                "-f",
+                "Makefile.Debug",
+                "-j6"
+            ],
+            "dependsOn": [
+                "qmake-debug"
+            ]
+        },
+        {
+            "label": "run-debug",
+            "type": "process",
+            "options": {
+                "cwd": "${workspaceFolder}/build/debug"
+            },
+            "command": "QList_QLinkedList.exe",
+            "dependsOn": [
+                "make-debug"
+            ]
+        },
+        {
+            "label": "qmake-release",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "command": "G:/Qt/5.14.2/mingw73_64/bin/qmake",
+            "args": [
+                "../QList_QLinkedList.pro",
+                "-spec",
+                "win32-g++",
+                "\"CONFIG+=qtquickcompiler\""
+            ],
+            "dependsOn": []
+        },
+        {
+            "label": "make-release",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "command": "mingw32-make",
+            "args": [
+                "-f",
+                "Makefile.Release",
+                "-j7"
+            ],
+            "dependsOn": [
+                "qmake-release"
+            ]
+        },
+        {
+            "label": "run-release",
+            "type": "process",
+            "options": {
+                "cwd": "${workspaceFolder}/build/release"
+            },
+            "command": "QList_QLinkedList.exe",
+            "dependsOn": [
+                "make-release"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "command": "mingw32-make",
+            "args": [
+                "clean"
+            ]
+        }
+    ]
+}
