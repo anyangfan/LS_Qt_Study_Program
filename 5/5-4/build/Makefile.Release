@@ -72,7 +72,7 @@ release/VSumProTest.exe: G:/Qt/5.14.2/mingw73_64/lib/libQt5Widgets.a G:/Qt/5.14.
 	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) $(OBJECTS)  $(LIBS)
 
 qmake: FORCE
-	@$(QMAKE) -o Makefile.Release ..\VSumProTest.pro -spec win32-g++ "CONFIG+=qtquickcompiler"
+	@$(QMAKE) -o Makefile.Release ..\VSumProTest.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qtquickcompiler"
 
 qmake_all: FORCE
 
