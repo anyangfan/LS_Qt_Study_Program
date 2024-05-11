@@ -5,10 +5,10 @@
 ### 1.1配置环境变量
 
 1. path变量
-![path变量](material_lib\1.1.1.PNG)
+![path变量](material_lib/1.1.1.PNG)
 
 2. 新增Qt变量
-![Qt变量](material_lib\1.1.2.PNG)
+![Qt变量](material_lib/1.1.2.PNG)
 
 ### 1.2 vscode工作空间配置
 
