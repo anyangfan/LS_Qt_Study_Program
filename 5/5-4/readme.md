@@ -6,7 +6,7 @@
 
 ### setText(tr("XXXXXXXX"))
 
-![code exampel 1](material_lib/1.png)
+![code exampel 1](5\5-4\material_lib\1.png)
 
 - 在Qt中，`tr()` 是一个用于文本翻译的函数，它标识了一个需要本地化的文本。其作用是使得程序可以根据当前的语言环境来选择合适的文本显示。通常用于多语言支持的场景。
 
@@ -14,7 +14,7 @@
 
 ### toDouble
 
-![code exampel 2](material_lib/2.PNG)
+![code exampel 2](5\5-4\material_lib\1.png)
 
 - 在这段代码中，`valueStr.toDouble(&isLoop)` 是将 `valueStr` 转换为 `double` 类型的浮点数，并将转换的结果存储在 `valueInt` 变量中。而 `&isLoop` 是传递一个指向 `bool` 类型变量的指针，用于指示转换是否成功。
 
