@@ -27,7 +27,8 @@ Dialog::Dialog(QWidget *parent)
     mLay->addWidget(lab2,1,0);
     mLay->addWidget(pbt,1,1);
 
-    connect(lEdit,SIGNAL(textChanged(QString)),this,SLOT(CalcBallVolume()));
+    //connect(lEdit,SIGNAL(textChanged(QString)),this,SLOT(CalcBallVolume()));
+    connect(pbt,SIGNAL(clicked()),this,SLOT(CalcBallVolume()));
 }
 
 Dialog::~Dialog()
@@ -40,7 +41,7 @@ void Dialog::CalcBallVolume() // 槽函数计算圆球的体积
     QString tempStr;
     QString valueStr=lEdit->text();
 
-    int valueInt=valueStr.toInt(&isLoop);
+    double valueInt=valueStr.toDouble(&isLoop);
     double dVSum=4.0/3.0*PI*valueInt*valueInt*valueInt;
     lab2->setText(tempStr.setNum(dVSum));
 }
