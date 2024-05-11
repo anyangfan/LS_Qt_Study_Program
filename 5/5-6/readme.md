@@ -1,3 +1,9 @@
-# 字符串类应用与常用数据类型
+# QMap_QHash_QVector
 
-详情参考:\material_lib\5.字符串类应用与常用基本数据类型.pdf
+详细内容参考:material_lib\6.QMap类 & QHash类 & QVector类.pdf
+
+## QMap
+
+## QHash
+
+## QVector
