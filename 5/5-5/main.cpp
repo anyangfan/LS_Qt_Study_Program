@@ -39,12 +39,12 @@ int main(int argc, char *argv[])
     strtemp.sprintf("%s %s","Welcome","to you.");
     qDebug()<<qPrintable(strtemp);*/
 
-    // 4:QString::arg()函数
+    // 4.1:QString::arg()函数
     /*QString strTemp;
     strTemp=QString("%1 was born in %2.").arg("Sunny").arg(2000);
     qDebug()<<strTemp;*/
 
-    // 4:QString::startsWith()函数
+    // 4.2:QString::startsWith()函数
     /*QString strTemp="How are you";
     qDebug()<<strTemp.startsWith("How",Qt::CaseSensitive); // true
     qDebug()<<strTemp.startsWith("are",Qt::CaseSensitive); // false*/
@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
     for(int i=0;i<str.size();i++)
         qDebug()<<int(bytes.at(i));*/
 
-    // 8:QDateTime QByteArray
+    // 9:QDateTime QByteArray
     QDateTime dt;
     QString strDT=dt.currentDateTime().toString("yyyy-MM-dd hh:mm:ss");
     qDebug()<<strDT<<endl;
