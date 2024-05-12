@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "qdialog": "cpp",
+        "ostream": "cpp",
+        "qvariant": "cpp",
+        "iostream": "cpp",
+        "*.tcc": "cpp",
+        "string": "cpp"
+    }
+}
