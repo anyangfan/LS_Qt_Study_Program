@@ -1,8 +1,7 @@
 # Qt 开发基础体系
 
-- 5-3 vscode测试Qt框架
-- 5-4 Qt信号与槽机制
-- 5-5 字符串类应用与常用数据类型
-- 5-6 QMap_QHash_QVector
-- 5-7 QList类 & QLinkedList类
-- 5-8 QVariant类
+## Qt中QMainWindow、QWidget、QDialog的区别
+
+- QMainWindow是一个主窗口类，它是一个包含状态栏、主菜单等我们常用的工具的界面。
+- QWidget是一个最基础的可视化界面，可以理解为最原始的一张白纸，我们需要向其添加一些控件和布局。
+- QDialog是一个对话框，我们如果需要建立对话框类界面则需要选它，并且如果它后面还有窗口，那么后面窗口不可选择。
