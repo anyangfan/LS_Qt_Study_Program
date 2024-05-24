@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     //4: 将QToolBar对象进行实例化
     tbar=new QToolBar(this);
-    tbar->setGeometry(20,20,200,50);
+    tbar->setGeometry(20,20,250,100);
 
     //5: 将QStyle类对象进行实例化，主要目的设置风格，图标是系统自带
     QStyle *sty=QApplication::style();

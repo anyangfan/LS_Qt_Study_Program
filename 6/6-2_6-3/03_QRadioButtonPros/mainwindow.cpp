@@ -6,7 +6,8 @@ MainWindow::MainWindow(QWidget *parent)
     // 设置窗口运行位置
     this->setGeometry(300,150,500,300);
 
-    this->setStyleSheet("QMainWindow {background-color:rgba(255,0,0,100%);}");
+    //设置背景为白色
+    this->setStyleSheet("QMainWindow {background-color:rgba(255,255,255,100%);}");
 
     // 将QRadioButton类的两个对象进行实例化
     radb1 = new QRadioButton(this);
