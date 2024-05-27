@@ -33,13 +33,15 @@ Widget::~Widget()
 // 1:
 void Widget::textlabelFunc()
 {
-    QString fName("d:\\666.jpg");
-
+    //QString fName("666.jpg");
+    //相对路径 C:\Users\Andy\Desktop\LS_Qt_Study_Program\6\6-5\02_QtDisplayWidgetProssss\666.jpg
+    
+    QString fName("..\\..\\666.jpg");
     QImage *qimg=new QImage;
 
     if(!(qimg->load(fName))) // 判断加载图片
     {
-        QMessageBox::information(this,"失败","加载jpg图片失败，请重新检查?");
+        QMessageBox::information(this,"失败","加载jpg图片失败,请重新检查?");
         delete  qimg;
 
         return;
@@ -50,9 +52,12 @@ void Widget::textlabelFunc()
 
 // 2:
 void Widget::textbrowserFuncReadTxt()
-{
+{   
+    // 设置当前目录
+    QDir::setCurrent(QCoreApplication::applicationDirPath());
+
     QString qStrdData;
-    QFile qfile("d:\\testfile.txt");
+    QFile qfile("moc_widget.cpp");
 
     if(!(qfile.open(QIODevice::ReadOnly|QIODevice::Text)))
     {

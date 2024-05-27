@@ -13,6 +13,7 @@
 // 4:
 #include <QTimer>
 
+#include <QDir>
 
 
 

@@ -69,6 +69,13 @@ MainWindow::MainWindow(QWidget *parent)
 
     // 设置工作目录为可执行程序的工作目录
     QDir::setCurrent(QCoreApplication::applicationDirPath());
+    /*
+    该函数的作用是将当前工作目录设置为Qt应用程序的目录。
+    具体来说，它使用QCoreApplication::applicationDirPath()获取应用程序所在目录的路径，
+    并将其作为参数传递给QDir::setCurrent()函数，以设置当前工作目录。
+    这样做的好处是确保应用程序在执行过程中访问到的文件路径都是相对于应用程序目录的，
+    避免了因为工作目录设置不当导致的文件找不到等问题。
+    */
     QFile fe("moc_mainwindow.cpp");
     fe.open((QFile::ReadOnly|QFile::Text));
 
@@ -81,7 +88,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     // 5: 改变窗口背景颜色
-    this->setStyleSheet("QMainWindow{background-color:""rgba(250,220,120,100%)}");
+    this->setStyleSheet("QMainWindow{background-color:rgba(250,220,120,100%)}");
 
     spinbox=new QSpinBox(this);
     spinbox->setGeometry(440,250,150,30);
