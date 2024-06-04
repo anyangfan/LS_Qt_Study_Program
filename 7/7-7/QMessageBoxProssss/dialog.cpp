@@ -45,6 +45,15 @@ void Dialog::displayquestionMsg()
 
     switch(QMessageBox::question(this,"Question消息框",
                                  "你是否想退出程序应用，请选择?",QMessageBox::Ok|QMessageBox::Cancel,QMessageBox::Ok))
+    /* 
+    这是一个使用Qt框架中QMessageBox类的示例代码，通常用于在图形用户界面中显示消息框。让我来解释一下这些参数：
+    QMessageBox::question: 这是一个静态方法，用于显示一个询问类型的消息框。它通常用于询问用户是否想要执行某个操作。
+    this: 这表示当前窗口或对话框的指针。在Qt中，通常使用this来引用当前对象。
+    "Question消息框": 这是消息框的标题，会显示在消息框的标题栏上。
+    "你是否想退出程序应用，请选择?": 这是要显示的消息文本，通常包含一条问题或提示信息。
+    QMessageBox::Ok|QMessageBox::Cancel: 这是按钮的组合。在这里，QMessageBox::Ok表示消息框中会显示一个“确定”按钮，QMessageBox::Cancel表示消息框中会显示一个“取消”按钮。| 是按位或运算符，将两个按钮组合在一起。
+    QMessageBox::Ok: 这是默认按钮，表示用户按下回车键时，该按钮的行为将被触发。
+    */
     {
     case QMessageBox::Ok:
         displabel->setText("你选择questionMsg命令按钮当中的button/Ok!");
@@ -94,16 +103,12 @@ void Dialog::displaycriticalMsg()
     displabel->setText("critical QMessageBox");
     QMessageBox::critical(this,"critical消息框","数据库文件备份错误，请重新检查？");
     return ;
-
-
 }
 void Dialog::displayaboutMsg()
 {
     displabel->setText("about QMessageBox");
     QMessageBox::about(this,"about消息框","测试Qt about消息框");
     return ;
-
-
 }
 void Dialog::displayaboutqtMsg()
 {

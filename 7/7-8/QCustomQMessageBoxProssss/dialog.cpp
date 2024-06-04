@@ -4,7 +4,7 @@ Dialog::Dialog(QWidget *parent)
     : QDialog(parent)
 {
 
-    resize(260,90);
+    resize(260,120);
 
     glayout=new QGridLayout(this);
 
@@ -33,10 +33,22 @@ void Dialog::customMsg()
 
     // 添加按钮
     QPushButton *yes=cMsgBox.addButton("YES",QMessageBox::ActionRole);
+    /* 
+    这段代码是使用Qt库中的QMessageBox类创建了一个消息框对象cMsgBox，
+    并设置了其窗口标题为"零声教育消息框"。
+    接着，代码通过addButton()函数向消息框中添加了一个按钮，按钮上显示的文本是"YES"，
+    并将按钮的角色设置为QMessageBox::ActionRole，表示这是一个操作按钮。
+     */
     QPushButton *no=cMsgBox.addButton("NO",QMessageBox::ActionRole);
 
     // 添加图标
-    cMsgBox.setIconPixmap(QPixmap("d:\\lspng.png"));
+    
+
+    // 设置当前目录
+    QDir::setCurrent(QCoreApplication::applicationDirPath());
+
+
+    cMsgBox.setIconPixmap(QPixmap("..\\..\\..\\00_material_lib\\lspng.png"));
     cMsgBox.exec();
 
     // 判断用户点击按钮 yes no

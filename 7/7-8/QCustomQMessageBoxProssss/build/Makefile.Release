@@ -233,6 +233,12 @@ release/moc_dialog.cpp: ../dialog.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qpushbutton.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qabstractbutton.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtGui/qicon.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/QDir \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qdir.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qfileinfo.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/QCoreApplication \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qcoreapplication.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qeventloop.h \
 		release/moc_predefs.h \
 		G:/Qt/5.14.2/mingw73_64/bin/moc.exe
 	G:\Qt\5.14.2\mingw73_64\bin\moc.exe $(DEFINES) --include C:/Users/Andy/Desktop/LS_Qt_Study_Program/7/7-8/QCustomQMessageBoxProssss/build/release/moc_predefs.h -IG:/Qt/5.14.2/mingw73_64/mkspecs/win32-g++ -IC:/Users/Andy/Desktop/LS_Qt_Study_Program/7/7-8/QCustomQMessageBoxProssss -IG:/Qt/5.14.2/mingw73_64/include -IG:/Qt/5.14.2/mingw73_64/include/QtWidgets -IG:/Qt/5.14.2/mingw73_64/include/QtGui -IG:/Qt/5.14.2/mingw73_64/include/QtANGLE -IG:/Qt/5.14.2/mingw73_64/include/QtCore -I. -IG:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IG:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IG:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IG:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IG:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IG:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\dialog.h -o release\moc_dialog.cpp
@@ -375,10 +381,14 @@ release/main.o: ../main.cpp ../dialog.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qpushbutton.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qabstractbutton.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtGui/qicon.h \
-		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/QApplication \
-		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qapplication.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/QDir \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qdir.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qfileinfo.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/QCoreApplication \
 		G:/Qt/5.14.2/mingw73_64/include/QtCore/qcoreapplication.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtCore/qeventloop.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/QApplication \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qapplication.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qdesktopwidget.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtGui/qguiapplication.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtGui/qinputmethod.h
@@ -503,7 +513,13 @@ release/dialog.o: ../dialog.cpp ../dialog.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/QPushButton \
 		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qpushbutton.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qabstractbutton.h \
-		G:/Qt/5.14.2/mingw73_64/include/QtGui/qicon.h
+		G:/Qt/5.14.2/mingw73_64/include/QtGui/qicon.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/QDir \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qdir.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qfileinfo.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/QCoreApplication \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qcoreapplication.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qeventloop.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\dialog.o ..\dialog.cpp
 
 release/moc_dialog.o: release/moc_dialog.cpp 

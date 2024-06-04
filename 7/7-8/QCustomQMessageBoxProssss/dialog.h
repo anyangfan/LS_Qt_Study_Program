@@ -7,7 +7,8 @@
 #include <QLabel>
 #include <QGridLayout>
 #include <QPushButton>
-
+#include <QDir>
+#include <QCoreApplication>
 
 
 class Dialog : public QDialog
