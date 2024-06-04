@@ -5,6 +5,7 @@ Dialog::Dialog(QWidget *parent)
 {
 
     setWindowTitle("颜色对话框测试");
+    this->resize(300,200);
 
     glayout=new QGridLayout(this);  // new一个布局对象
 
