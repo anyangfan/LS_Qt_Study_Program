@@ -30,7 +30,7 @@ Dialog::~Dialog()
 
 void Dialog::dispcolorFunc()
 {
-    QColor colorvalues=QColorDialog::getColor(Qt::red);
+    QColor colorvalues=QColorDialog::getColor(Qt::red);//调用颜色对话框并设置默认颜色
 
     if(colorvalues.isValid())
     {
