@@ -36,7 +36,7 @@ MainWindow::MainWindow(QWidget *parent)
     combobox->addItem("澳门特别行政区");
 
     // 信号槽函数连接实现
-    connect(combobox,SIGNAL(currentIndexChanged(int)),this,SLOT(comboboxIndex(int)));
+    connect(combobox,SIGNAL(currentIndexChanged(int)),this,SLOT(comboboxIndex( int)));
 
     // 2:
     fontcombobox=new QFontComboBox(this);
