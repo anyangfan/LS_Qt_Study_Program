@@ -9,9 +9,9 @@ Widget::Widget(QWidget *parent)
 
     glayout=new QGridLayout; // 控制面板的布局
 
-    setWindowTitle("Qt绘图框架测试：QPainter类");
+    setWindowTitle("Qt绘图框架测试:QPainter类");
 
-    labelshape=new QLabel("绘制形状："); //右边有一个下拉列表框
+    labelshape=new QLabel("绘制形状:"); //右边有一个下拉列表框
     comboboxshape=new QComboBox;
     comboboxshape->addItem("Line",PainterArea::Line);
     comboboxshape->addItem("Rectangle",PainterArea::Rectangle);

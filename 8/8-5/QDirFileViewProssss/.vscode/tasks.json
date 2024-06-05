@@ -25,7 +25,7 @@
             },
             "command": "G:/Qt/5.14.2/mingw73_64/bin/qmake.exe", //qmake命令，这里没用完整路径，是因为配置到环境变量了 G:/Qt/5.14.2/mingw73_64/bin/qmake.exe
             "args": [ //跟的参数是不是很熟悉，就是上面分析出来的Qt Creator执行流程
-                "../QStringTestTypePro.pro", //在build目录上一级哦
+                "../QDirFileViewProssss.pro", //在build目录上一级哦
                 "-spec",
                 "win32-g++",
                 "\"CONFIG+=debug\"",
@@ -58,7 +58,7 @@
             "options": {
                 "cwd": "${workspaceFolder}/build/debug" //没在.pro配置DESTDIR,会生成到build目录下面对应目录
             },
-            "command": "QStringTestTypePro.exe", //执行的exe名字，一般当前项目文件夹的名称，自定义可以写其他的
+            "command": "QDirFileViewProssss.exe", //执行的exe名字，一般当前项目文件夹的名称，自定义可以写其他的
             "dependsOn": [
                 "make-debug"
             ]
@@ -74,8 +74,8 @@
             "command": "G:/Qt/5.14.2/mingw73_64/bin/qmake",
             
             "args": [ //注意release跟debug参数的差异
-                //"../QStringTestTypePro.pro",
-                "../QStringTestTypePro.pro",
+                //"../QDirFileViewProssss.pro",
+                "../QDirFileViewProssss.pro",
                 "-spec",
                 "win32-g++",
                 "\"CONFIG+=qtquickcompiler\""
@@ -106,7 +106,7 @@
             "options": {
                 "cwd": "${workspaceFolder}/build/release"
             },
-            "command": "QStringTestTypePro.exe",
+            "command": "QDirFileViewProssss.exe",
             "dependsOn": [
                 "make-release"
             ]
