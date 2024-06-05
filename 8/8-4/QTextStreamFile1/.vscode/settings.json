@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "qdialog": "cpp",
+        "ostream": "cpp"
+    }
+}
