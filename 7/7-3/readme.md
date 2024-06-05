@@ -2,4 +2,4 @@
 
 ## QFileDialogProsssss
 
-![QFileDialog 类](00_material_lib\1.JPG)
+![QFileDialog 类](00_material_lib/1.JPG)
