@@ -31,6 +31,11 @@ void MainWindow::CreateToolBarFunc() // 创建工具条
     labelstyle=new QLabel("线型风格：");
     comboboxlabelstyle=new QComboBox;
     comboboxlabelstyle->addItem("SolidLine",static_cast<int>(Qt::SolidLine)); // 实线
+    /* 
+    static_cast<int>(Qt::SolidLine) 是一个类型转换表达式，将Qt::SolidLine枚举值转换为int类型。
+    Qt::SolidLine是Qt中定义的一个枚举值，表示实线样式。
+    总的来说，这行代码的作用就是向一个下拉列表中添加一个选项，并将这个选项与一个枚举值关联。
+     */
     comboboxlabelstyle->addItem("DashLine",static_cast<int>(Qt::DashLine)); //
     comboboxlabelstyle->addItem("DashDotDotLine",static_cast<int>(Qt::DashDotDotLine));
     comboboxlabelstyle->addItem("DotLine",static_cast<int>(Qt::DotLine)); // 虚线
@@ -40,6 +45,8 @@ void MainWindow::CreateToolBarFunc() // 创建工具条
 
     labelwidth=new QLabel("线型宽度：");
     spinboxlabelwidth=new QSpinBox;
+    //设置初始值
+    spinboxlabelwidth->setValue(2);
     connect(spinboxlabelwidth,SIGNAL(valueChanged(int)),drawWidget,SLOT(setWidth(int)));
 
     colorbutton=new QToolButton;
@@ -73,12 +80,13 @@ void MainWindow::dispstyle()
 
 void MainWindow::dispcolor()
 {
-    QColor color=QColorDialog::getColor(static_cast<int>(Qt::black),this);
+    QColor color=QColorDialog::getColor(static_cast<int>(Qt::white),this);
     if(color.isValid())
     {
         drawWidget->setColor(color);
         QPixmap ps(20,20);
         ps.fill(color);
+        colorbutton->setIcon(QIcon(ps));
     }
 
 
