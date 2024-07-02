@@ -249,6 +249,12 @@ release/moc_mainwidget.cpp: ../mainwidget.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qgraphicsitem.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtGui/QPixmap \
 		G:/Qt/5.14.2/mingw73_64/include/QtGui/QPainter \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/QDir \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qdir.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qfileinfo.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/QCoreApplication \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qcoreapplication.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qeventloop.h \
 		release/moc_predefs.h \
 		G:/Qt/5.14.2/mingw73_64/bin/moc.exe
 	G:\Qt\5.14.2\mingw73_64\bin\moc.exe $(DEFINES) --include C:/Users/Andy/Desktop/LS_Qt_Study_Program/8/8-2/QGraphicsViewSceneItemProssss/build/release/moc_predefs.h -IG:/Qt/5.14.2/mingw73_64/mkspecs/win32-g++ -IC:/Users/Andy/Desktop/LS_Qt_Study_Program/8/8-2/QGraphicsViewSceneItemProssss -IG:/Qt/5.14.2/mingw73_64/include -IG:/Qt/5.14.2/mingw73_64/include/QtWidgets -IG:/Qt/5.14.2/mingw73_64/include/QtGui -IG:/Qt/5.14.2/mingw73_64/include/QtANGLE -IG:/Qt/5.14.2/mingw73_64/include/QtCore -I. -IG:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IG:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IG:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IG:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IG:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IG:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\mainwidget.h -o release\moc_mainwidget.cpp
@@ -403,10 +409,14 @@ release/main.o: ../main.cpp ../mainwidget.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qgraphicsitem.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtGui/QPixmap \
 		G:/Qt/5.14.2/mingw73_64/include/QtGui/QPainter \
-		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/QApplication \
-		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qapplication.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/QDir \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qdir.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qfileinfo.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/QCoreApplication \
 		G:/Qt/5.14.2/mingw73_64/include/QtCore/qcoreapplication.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtCore/qeventloop.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/QApplication \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qapplication.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qdesktopwidget.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtGui/qguiapplication.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtGui/qinputmethod.h
@@ -543,7 +553,13 @@ release/mainwidget.o: ../mainwidget.cpp ../mainwidget.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/QGraphicsItem \
 		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qgraphicsitem.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtGui/QPixmap \
-		G:/Qt/5.14.2/mingw73_64/include/QtGui/QPainter
+		G:/Qt/5.14.2/mingw73_64/include/QtGui/QPainter \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/QDir \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qdir.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qfileinfo.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/QCoreApplication \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qcoreapplication.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qeventloop.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwidget.o ..\mainwidget.cpp
 
 release/pixitem.o: ../pixitem.cpp ../pixitem.h \

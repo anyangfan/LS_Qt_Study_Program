@@ -14,6 +14,8 @@
 
 #include "pixitem.h"
 #include <math.h>
+#include <QDir>
+#include <QCoreApplication>
 
 
 

@@ -101,6 +101,32 @@ void DrawWidget::resizeEvent(QResizeEvent *event)
     QWidget::resizeEvent(event);
 
 }
+/* 
+    QWidget::resizeEvent(event); 是调用了基类 QWidget 中的 resizeEvent() 函数，
+    该函数是在控件的大小发生变化时自动触发的。在这个特定的代码中，
+    QWidget::resizeEvent(event); 的作用是调用基类 QWidget 中的 resizeEvent() 函数
+    以确保在 DrawWidget 控件的大小发生变化时，基类的相应操作也能得到执行。
 
+    在 DrawWidget 类的 resizeEvent() 函数中，如果控件的新高度或新宽度超过了当前绘图区域（pix 的高度或宽度），
+    就会创建一个新的 QPixmap 对象 newPix，其大小与当前控件大小相同，并用白色填充。
+    然后，通过 QPainter 在 newPix 上绘制当前的绘图内容（即 *pix），将其绘制到新的 QPixmap 中。
+    最后，将指针 pix 指向新的 QPixmap 对象，以更新绘图区域的内容。
+
+    通过调用 QWidget::resizeEvent(event);，
+    确保了基类 QWidget 中与控件大小相关的任何操作都能够在控件大小变化时得到执行，以保持正确的行为。
+
+    在这段代码中，重复调用 QWidget::resizeEvent(event); 不会直接导致 CPU 占用过高。
+    重复调用基类的 resizeEvent() 函数通常不会引起性能问题，因为它主要是处理与控件大小相关的一些内部管理和更新工作，而不是执行密集的计算或绘图操作。
+
+    然而，这段代码中存在潜在的性能问题。每次调用 resizeEvent() 时都会创建一个新的 QPixmap 对象 newPix，
+    并进行绘图操作，然后将 pix 指向新的 QPixmap。这意味着在控件频繁调整大小时，会频繁创建和销毁 QPixmap 对象，
+    以及进行额外的绘图操作，可能会影响性能。
+    如果控件的大小变化频繁且较快，这种频繁的创建和销毁 QPixmap 对象可能会导致内存分配和释放的开销，
+    以及不必要的绘图操作，从而影响 CPU 和内存的使用效率。
+
+    为了改善性能，可以考虑优化 resizeEvent() 函数，避免在每次调用时都创建新的 QPixmap 对象。
+    可以通过检查 event->size() 与 pix 的大小来确定是否需要创建新的 QPixmap，只
+    在实际需要时才进行创建和更新操作，以减少不必要的资源消耗。
+ */
 
 

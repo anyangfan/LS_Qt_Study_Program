@@ -3,6 +3,9 @@
 MainWidget::MainWidget(QWidget *parent)
     : QWidget(parent)
 {
+    //设置可执行程序目录为当前目录
+    QDir::setCurrent(QCoreApplication::applicationDirPath());
+    
     setWindowTitle("GraphicsView图形视图架构--应用程序测试");
     iAngle=3;
     scalevalues=3;
@@ -11,7 +14,7 @@ MainWidget::MainWidget(QWidget *parent)
     // 场景
     QGraphicsScene *sence=new QGraphicsScene;
     sence->setSceneRect(-200,-200,380,380);
-    QPixmap *pixmap=new QPixmap("d:\\3.png");
+    QPixmap *pixmap=new QPixmap("../../00_material_lib/1.jpg");
 
     // 图元
     pixitem=new PixItem(pixmap);
