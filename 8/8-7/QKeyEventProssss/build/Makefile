@@ -248,6 +248,7 @@ Makefile: ../QKeyEventProssss.pro G:/Qt/5.14.2/mingw73_64/mkspecs/win32-g++/qmak
 		G:/Qt/5.14.2/mingw73_64/mkspecs/features/qt_config.prf \
 		G:/Qt/5.14.2/mingw73_64/mkspecs/win32-g++/qmake.conf \
 		G:/Qt/5.14.2/mingw73_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		G:/Qt/5.14.2/mingw73_64/mkspecs/features/exclusive_builds.prf \
 		G:/Qt/5.14.2/mingw73_64/mkspecs/features/toolchain.prf \
 		G:/Qt/5.14.2/mingw73_64/mkspecs/features/default_pre.prf \
@@ -276,8 +277,8 @@ Makefile: ../QKeyEventProssss.pro G:/Qt/5.14.2/mingw73_64/mkspecs/win32-g++/qmak
 		G:/Qt/5.14.2/mingw73_64/lib/Qt5Gui.prl \
 		G:/Qt/5.14.2/mingw73_64/lib/Qt5Core.prl \
 		G:/Qt/5.14.2/mingw73_64/lib/qtmain.prl \
-		.qmake.stash \
-		G:/Qt/5.14.2/mingw73_64/mkspecs/features/build_pass.prf
+		G:/Qt/5.14.2/mingw73_64/mkspecs/features/build_pass.prf \
+		../images.qrc
 	$(QMAKE) -o Makefile ..\QKeyEventProssss.pro -spec win32-g++ "CONFIG+=qtquickcompiler"
 G:/Qt/5.14.2/mingw73_64/mkspecs/features/spec_pre.prf:
 G:/Qt/5.14.2/mingw73_64/mkspecs/qdevice.pri:
@@ -457,6 +458,7 @@ G:/Qt/5.14.2/mingw73_64/mkspecs/features/qt_functions.prf:
 G:/Qt/5.14.2/mingw73_64/mkspecs/features/qt_config.prf:
 G:/Qt/5.14.2/mingw73_64/mkspecs/win32-g++/qmake.conf:
 G:/Qt/5.14.2/mingw73_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 G:/Qt/5.14.2/mingw73_64/mkspecs/features/exclusive_builds.prf:
 G:/Qt/5.14.2/mingw73_64/mkspecs/features/toolchain.prf:
 G:/Qt/5.14.2/mingw73_64/mkspecs/features/default_pre.prf:
@@ -485,8 +487,8 @@ G:/Qt/5.14.2/mingw73_64/lib/Qt5Widgets.prl:
 G:/Qt/5.14.2/mingw73_64/lib/Qt5Gui.prl:
 G:/Qt/5.14.2/mingw73_64/lib/Qt5Core.prl:
 G:/Qt/5.14.2/mingw73_64/lib/qtmain.prl:
-.qmake.stash:
 G:/Qt/5.14.2/mingw73_64/mkspecs/features/build_pass.prf:
+../images.qrc:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\QKeyEventProssss.pro -spec win32-g++ "CONFIG+=qtquickcompiler"
 

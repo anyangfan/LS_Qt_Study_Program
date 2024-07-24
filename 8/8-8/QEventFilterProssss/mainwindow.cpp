@@ -11,17 +11,17 @@ MainWindow::MainWindow(QWidget *parent)
 
     // 展示图片
     label1jpg=new QLabel;
-    image1jpg.load("d:/a.jpg");
+    image1jpg.load(":/images/a.jpg");
     label1jpg->setAlignment(Qt::AlignHCenter|Qt::AlignVCenter);
     label1jpg->setPixmap(QPixmap::fromImage(image1jpg));
 
     label2jpg=new QLabel;
-    image2jpg.load("d:/b.jpg");
+    image2jpg.load(":/images/b.jpg");
     label2jpg->setAlignment(Qt::AlignHCenter|Qt::AlignVCenter);
     label2jpg->setPixmap(QPixmap::fromImage(image2jpg));
 
     label3jpg=new QLabel;
-    image3jpg.load("d:/c.jpg");
+    image3jpg.load(":/images/c.jpg");
     label3jpg->setAlignment(Qt::AlignHCenter|Qt::AlignVCenter);
     label3jpg->setPixmap(QPixmap::fromImage(image3jpg));
 

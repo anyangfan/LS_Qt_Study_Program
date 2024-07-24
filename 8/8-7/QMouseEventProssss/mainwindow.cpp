@@ -67,7 +67,7 @@ void MainWindow::mouseReleaseEvent(QMouseEvent *e)
 
 void MainWindow::disppicture()
 {
-    QString filenames("d:/1.jpg");
+    QString filenames(":/images/a.jpg");
 
     QImage *image=new QImage;
     QLabel *imagelabel=new QLabel(this);

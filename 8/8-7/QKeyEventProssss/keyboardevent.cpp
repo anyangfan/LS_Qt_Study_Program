@@ -21,7 +21,7 @@ keyboardevent::keyboardevent(QWidget *parent)
     pix=new QPixmap(width,height);
     pix->fill(Qt::white);
 
-    image.load("d:/tiger.jpg");
+    image.load(":/images/images/a.jpg");
 
     startx=30;
     starty=30;
